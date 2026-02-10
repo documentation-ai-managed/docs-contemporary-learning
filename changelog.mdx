@@ -1,0 +1,122 @@
+---
+title: Changelog
+description: Review the version history of Contemporary Learning, including recent updates, new features, and improvements.
+---
+
+<Callout kind="info" title="Stay Updated">
+Subscribe to our release notifications to get the latest updates on new features, bug fixes, and improvements for Contemporary Learning.
+</Callout>
+
+## Recent Releases
+
+Stay informed about the latest enhancements to Contemporary Learning, your platform for creating interactive courses, MCQ questions, presentations, and more. Below are the most recent updates.
+
+<Update label="2024-10-15" description="v1.3.0" tags={["feature", "improvement"]}>
+## New Features
+
+- Added multi-page course builder with drag-and-drop components for richer learning experiences.
+- Introduced OTP login flow with email verification for secure, passwordless authentication.
+- New upload support for HTML presentations and Mac Keynote ZIP files.
+
+## Improvements
+
+- Enhanced MCQ and True/False question editors with inline statement additions.
+- Improved text formatting tools including bold, italic, underline, strikethrough, and alignment options.
+- Better indentation controls with left/right indent icons for precise content layout.
+
+## Bug Fixes
+
+- Fixed email validation errors in the OTP send form.
+- Resolved issues with external link component previews.
+</Update>
+
+<Update label="2024-09-20" description="v1.2.0" tags={["feature", "bugfix"]}>
+## New Features
+
+- Transformative pedagogy tools now include authentic student learning modules mediated by interactive technologies.
+- Added color picker for custom course theming using your brand colors like `#BB2649`.
+- Continue/Done buttons for streamlined course creation workflows.
+
+## Improvements
+
+- Didactic teaching tools now support transmitting information via embedded videos and images.
+- Enhanced line and info icons for better UI feedback in editors.
+
+## Bug Fixes
+
+- Corrected alignment issues in H1, H2, H3 formatting.
+- Fixed list numbered and bulleted formatting persistence.
+</Update>
+
+<Update label="2024-08-10" description="v1.1.0" tags={["breaking", "feature"]}>
+## New Features
+
+- Initial course creation dashboard with upload presentation and question editor support.
+- Integrated login with OTP and create account flows.
+- Basic components library including link, image, and external link builders.
+
+## Breaking Changes
+
+- Updated API endpoints for course uploads; migrate to new `/v1/courses` path.
+
+## Bug Fixes
+
+- Resolved upload errors for presentation ZIP files.
+</Update>
+
+## Upgrade Instructions
+
+<Steps>
+  <Step title="Backup Your Data" icon="database">
+    Export your courses and questions from the dashboard to prevent data loss.
+  </Step>
+  <Step title="Update Platform" icon="download">
+    <CodeGroup tabs="Docker,NPM">
+      ````bash
+      docker pull contemporarylearning:latest
+      docker-compose up -d
+      ````
+
+      ````bash
+      npm update contemporary-learning
+      npm run build
+      ````
+    </CodeGroup>
+  </Step>
+  <Step title="Verify Changes" icon="check-circle">
+    Check the changelog for breaking changes and test your courses.
+  </Step>
+  <Step title="Clear Cache" icon="refresh-cw">
+    Run `npm run clear-cache` or restart services.
+  </Step>
+</Steps>
+
+## Upcoming Features
+
+<ExpandableGroup>
+  <Expandable title="Advanced Analytics" default-open="true">
+    Track student engagement with detailed reports on course completion and question performance.
+  </Expandable>
+  <Expandable title="AI-Assisted Content Creation">
+    Generate MCQ questions automatically from uploaded presentations.
+  </Expandable>
+  <Expandable title="Collaborative Editing">
+    Real-time multi-user editing for course builders.
+  </Expandable>
+</ExpandableGroup>
+
+<Columns cols={3}>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Get started with the latest version.
+  </Card>
+  <Card title="API Reference" icon="code" href="/authentication">
+    Updated endpoints and auth methods.
+  </Card>
+  <Card title="Report Issues" icon="alert-triangle" href="https://github.com/contemporarylearning/issues" target="_blank">
+    Found a bug? Let us know.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+Check [https://dashboard.example.com/changelog](https://dashboard.example.com/changelog) for full release details and migration guides.
+</Callout>

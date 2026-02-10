@@ -1,0 +1,140 @@
+---
+title: Integrations and External Content
+description: Connect Contemporary Learning with external resources to enhance your courses with links, embeds, and third-party media.
+---
+
+## Overview
+
+Contemporary Learning supports seamless integration with external resources to enrich your courses. You can add links to websites, embed interactive content like videos or forms, insert images and media files, and share your course content externally. These features help you create dynamic learning experiences without leaving the platform.
+
+<Columns cols={3}>
+  <Card title="External Links" icon="link" href="#external-links">
+    Add hyperlinks to websites, documents, or resources.
+  </Card>
+  <Card title="Embeds & Media" icon="video" href="#embeds">
+    Embed videos, slides, or third-party tools directly.
+  </Card>
+  <Card title="Sharing & Export" icon="share-2" href="#sharing">
+    Export courses or generate shareable links.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Always verify external content accessibility and ensure it aligns with your course objectives before embedding.
+</Callout>
+
+## Adding External Links and Embeds
+
+Use the link and embed tools in the course editor to connect to outside resources.
+
+<Tabs>
+  <Tab title="Simple Links" icon="link">
+    Create clickable links for navigation.
+
+    <Steps>
+      <Step title="Open Editor" icon="edit-3">
+        Navigate to your course editor and select the text or button component.
+      </Step>
+      <Step title="Insert Link" icon="link">
+        Click the link icon and enter the URL, such as `https://example.com/resource`.
+      </Step>
+      <Step title="Customize" icon="settings">
+        Add link text like "Read More" and set to open in a new tab.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Iframe Embeds" icon="layout">
+    Embed interactive content using iframes.
+
+    <Steps>
+      <Step title="Get Embed Code" icon="code">
+        Copy the embed code from the provider, e.g., YouTube or Google Forms.
+      </Step>
+      <Step title="Paste in HTML" icon="upload">
+        In the HTML upload component, paste:
+      </Step>
+      <Step title="Preview & Save" icon="eye">
+        Preview the embed and save your course.
+      </Step>
+    </Steps>
+
+````html
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Sample Video" frameborder="0" allowfullscreen></iframe>
+````
+  </Tab>
+</Tabs>
+
+## Image and Media Insertion
+
+Insert images, videos, and presentations to make your content visually engaging.
+
+<CodeGroup tabs="Image,Video,Keynote">
+```html
+<img src="https://example.com/course-image.jpg" alt="Course illustration" width="800" height="600">
+```
+
+````html
+<video width="800" height="450" controls>
+  <source src="https://example.com/lecture.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+````
+
+````html
+<!-- Upload as ZIP with HTML files from Mac Keynote export -->
+<div class="keynote-presentation">
+  <!-- Exported HTML content here -->
+</div>
+````
+</CodeGroup>
+
+<Callout kind="info">
+  Supported formats: JPG, PNG, MP4, WebM. Use `alt` attributes for accessibility.
+</Callout>
+
+## Exporting or Sharing Course Content
+
+Share your courses externally or export for other platforms.
+
+<Expandable title="Export Options" default-open="true">
+  1. Generate a public share link from the course settings.
+  2. Export as SCORM package for LMS import.
+  3. Download HTML/ZIP for custom hosting.
+</Expandable>
+
+<Steps>
+  <Step title="Generate Share Link" icon="share">
+    Go to course settings > Sharing > Create link: `https://contemporarylearninghub.co.za/share/course-123`.
+  </Step>
+  <Step title="Export Content" icon="download">
+    Select Export > Choose format > Download ZIP.
+  </Step>
+</Steps>
+
+## Handling External Addresses in Components
+
+When using components like MCQ or True/False editors, add external links carefully.
+
+- In statement fields, use markdown: `[External Resource](https://example.com)`.
+- For multi-page courses, set external addresses in the component properties.
+
+<Expandable title="Advanced: Custom Components" default-open="false">
+  For custom integrations:
+
+````html
+<a href="https://external-site.com" target="_blank" rel="noopener noreferrer">
+  External Link
+</a>
+````
+
+  Always add `rel="noopener noreferrer"` for security.
+</Expandable>
+
+<Columns cols={2}>
+  <Card title="Troubleshooting" icon="help-circle" href="#">
+    Common issues and fixes.
+  </Card>
+  <Card title="Best Practices" icon="shield" href="#">
+    Security tips for embeds.
+  </Card>
+</Columns>
